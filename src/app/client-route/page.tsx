@@ -1,5 +1,6 @@
 "use client"
 
+import { clientSideFunction } from '@/utils/client-utils';
 import { useTheme } from '../components/theme-provider';
 import React from 'react';
 import Slider from 'react-slick';
@@ -11,8 +12,9 @@ export default function ClientRoutePage() {
   const settings = {
     dots: true,
   };
+  const result = clientSideFunction();
   return (
-    <h1 style={{ color: theme.colors.secondary}}>Client router page</h1>
+    <h1 style={{ color: theme.colors.secondary}}>Client router page {result}</h1>
   );
 }
 
